@@ -49,8 +49,10 @@ function generatePassword()
 
   for(i=1; i<=pwdlength; i++)
   {    
-    password += pwdstring.charAt(Math.floor(Math.random() * pwdstring.length));
-  }
+    // using Math.random with length to generate random number from 0 to length
+    // while chatAt method returns character at specfic index in string    
+    password += pwdstring.charAt(Math.floor(Math.random() * pwdstring.length));    
+  }  
     return password;
 }
 // Add event listener to generate button
